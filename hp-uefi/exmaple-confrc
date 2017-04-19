@@ -1,0 +1,12 @@
+[hook]
+write path: /var/www/html/pub/bootdisk_hook/       # Must contains /var/www/html/pub/
+uefi iso: True
+
+[satellite]
+hostname: sat62.example.com
+username: admin
+password: redhat
+
+[HP API]
+username: sat6
+password: changeme
