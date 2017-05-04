@@ -2,7 +2,7 @@
 
 Hook scripts for Foreman/Red Hat Satellite to provision hosts using the foreman bootdisk host image.
 
-When DHCP servers are not available in a subnet the foreman bootdisk ISO imaga can be used to bootstrap a systems and start a kickstart installation.
+When DHCP servers are not available in a subnet the foreman bootdisk ISO image can be used to bootstrap a systems and start a kickstart installation.
 
 To make the process of provisioning systems automatic this hooks will automate the following tasks:
 
@@ -14,14 +14,14 @@ When a host is created, or placed in build mode the hook will:
     Connect the bootdisk ISO image to the host.
     Configure the host to boot from CD-Rom.
 
-When the kicstart reports to foreman that the host is built:
+When the kickstart reports to foreman that the host is built:
 
     Remove/Disconnect/Unmount the ISO image from the host.
     Reconfigure the host to boot from hard drive.
     Start the host.
 
 There is validation before any of the above runs:
- - Hosts model name must contains 'HP' string
+ - Hosts model name must contain 'HP' string
  - Hosts comment must contain the iLO address
 
 
