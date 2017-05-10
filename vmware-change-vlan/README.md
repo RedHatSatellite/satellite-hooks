@@ -13,7 +13,7 @@ The idea is that when a host leaves build mode, the hook "before_provision" is e
 - vCenter URL and credentials for a service user that is allowed to edit the host objects in the vCenter needs to be added in the vcenter-change-host-vlan.py script (see row 32 of the script)
 - when provisioning a new VM, the user needs to specify the name of the target VLAN (the VLAN that the VM should be moved to) as a Parameter, e.g. "target_vlan: vlan1234". That value is then extracted by 01-change-host-vlan.sh and provided to vcenter-change-host-vlan.py. 
 
-In order to make the whole provisioning workflow automated, the kickstart files used also need to configure network settings correctly in the VM, but that is out of scope of this hook.
+In order to make the whole provisioning workflow automated, the kickstart files used also need to configure network settings for the new VLAN after the VM is done building, but that is out of scope of this hook.
 
 ## Troubleshooting
 see https://github.com/theforeman/foreman_hooks
